@@ -1,0 +1,4 @@
+interface:
+  display_name: "TdxBridge 联调助手"
+  short_description: "联调 TdxBridge 服务、验证认证并排查桥接问题"
+  default_prompt: "Use $tdxbridge-agent to 联调一个 TdxBridge 服务，先读取 /doc 获取完整接口说明，再优先完成低副作用验证和排障。"
