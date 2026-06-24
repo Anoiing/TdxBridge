@@ -1,0 +1,41 @@
+name: Release On Tag
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Verify Python Source
+        run: python -m compileall app scripts
+
+      - name: Build Release Package
+        run: python scripts/build_release.py --project-root "$GITHUB_WORKSPACE"
+
+      - name: Show Release Files
+        run: find dist -maxdepth 3 -type f | sort
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            "./dist/TdxBridge-release.zip" \
+            --repo "${{ github.repository }}" \
+            --title "${GITHUB_REF_NAME}" \
+            --generate-notes

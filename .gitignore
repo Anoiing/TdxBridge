@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.venv/
+venv/
+env/
+dist/
+logs
+runtime/*.pid
+runtime/*.lock
+给Hermes和OpenClaw的连接提示.txt
+给Hermes和OpenClaw的TdxBridge接入文档.md
+config/bridge.local.json
+config/bridge.json
