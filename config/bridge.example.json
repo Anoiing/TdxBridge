@@ -1,0 +1,36 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 18888
+  },
+  "local_rpc": {
+    "base_url": "http://127.0.0.1:17709/",
+    "timeout_sec": 15
+  },
+  "auth": {
+    "token": "replace-with-generated-token",
+    "allow_anonymous_health": true,
+    "allow_anonymous_capabilities": false
+  },
+  "network": {
+    "allowed_cidrs": []
+  },
+  "tdx": {
+    "install_dir": ""
+  },
+  "python_runtime": {
+    "mode": "subprocess-per-call",
+    "timeout_sec": 20,
+    "python_executable": "python"
+  },
+  "risk_control": {
+    "enable_trading": false,
+    "enable_block_push": false,
+    "enable_warn_send": false,
+    "enable_backtest_send": false
+  },
+  "logging": {
+    "level": "INFO",
+    "retain_days": 14
+  }
+}
