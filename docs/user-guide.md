@@ -2,6 +2,12 @@
 
 TdxBridge 面向 Windows 通达信机器安装。安装完成后，局域网内的 Hermes、OpenClaw 或其他 HTTP 客户端可以通过 TdxBridge 调用通达信能力。
 
+## 适用场景
+
+这个项目适合用来解决一种常见的割裂场景：Hermes、OpenClaw 等智能体在 Linux 或 macOS 上运行更顺手，长期服务、自动化调试和工具集成体验更好；但通达信客户端、本地 TQ 能力和相关插件环境只能稳定运行在 Windows 上。
+
+TdxBridge 的做法是让通达信留在 Windows，把 Windows 机器变成一个局域网桥接节点；Hermes、OpenClaw 或其他调用方继续运行在 Linux/macOS，通过 HTTP 调用 Windows 上的通达信能力，从而绕开“智能体运行环境”和“通达信运行环境”不能兼得的问题。
+
 ## 环境要求
 
 - 已安装并可正常启动的通达信客户端
