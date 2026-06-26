@@ -19,6 +19,7 @@ REQUIRED_DIRS = [
     "app",
     "scripts",
     "config",
+    "docs",
     "tdxbridge-agent",
 ]
 
@@ -28,7 +29,6 @@ RELEASE_SCRIPT_ALLOWLIST = {
     "Stop-TdxBridge.ps1",
     "Uninstall-TdxBridge.ps1",
 }
-
 
 def echo(title: str) -> None:
     print()
@@ -86,7 +86,6 @@ def copy_release_tree(project_root: Path, package_root: Path) -> None:
 
 def cleanup_release_tree(package_root: Path) -> None:
     excluded_paths = [
-        package_root / "TdxBridge桥接服务设计与实施方案.md",
         package_root / "10-打包发布-TdxBridge.cmd",
         package_root / "10-打包发布-TdxBridge.command",
         package_root / "app" / "__pycache__",

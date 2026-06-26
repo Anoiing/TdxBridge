@@ -62,7 +62,7 @@ app = FastAPI(
 logger = get_logger(__name__)
 access_logger = get_json_logger("tdxbridge.access", "access.log")
 audit_logger = get_json_logger("tdxbridge.audit", "audit.log")
-API_DOC_PATH = Path(__file__).resolve().parent.parent / "TdxBridge接口文档.md"
+API_DOC_PATH = Path(__file__).resolve().parent.parent / "docs" / "api.md"
 
 
 def _next_trace_id() -> str:
