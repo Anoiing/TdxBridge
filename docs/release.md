@@ -2,6 +2,8 @@
 
 TdxBridge 的发布包面向 Windows 终端用户。发布包应保留用户安装和智能体接入所需材料，排除源码仓库中的调试工具、日志和运行时产物。
 
+普通用户不需要自己打包，直接到 [GitHub Release tag 页面](https://github.com/Anoiing/TdxBridge/releases/tag) 下载已经构建好的 `TdxBridge-release.zip` 即可使用。
+
 ## 本地打包
 
 项目根目录提供两个打包入口：
