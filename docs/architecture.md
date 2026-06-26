@@ -87,7 +87,13 @@ TdxBridge/
     tqPythonWorker.py
     serializers.py
   config/
-    bridge.json
+    bridge.example.json
+  docs/
+    api.md
+    user-guide.md
+    tq-local.md
+    tq-python.md
+  tdxbridge-agent/
   runtime/
   logs/
   requirements.txt
@@ -113,6 +119,10 @@ TdxBridge/
    - 停止后台服务
 8. `scripts/Uninstall-TdxBridge.ps1`
    - 卸载计划任务和相关配置
+9. `docs/api.md`
+   - `/doc` 的源文档
+10. `tdxbridge-agent/`
+   - 支持 skill 的智能体接入资料
 
 ## 6. 总体架构
 
